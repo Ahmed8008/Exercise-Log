@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercise Log</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href=@Url.Content("/Content/img/favicon.ico") rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href=@Url.Content("/Content/lib/flaticon/font/flaticon.css") rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href=@Url.Content("/Content/css/style.min.css") rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">Exercise Log</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href='@Url.Action("HomePage","ExerciseLog")' class="nav-item nav-link active">Home</a>
+                    <a href='@Url.Action("Log","ExerciseLog")' class="nav-item nav-link">Exercise Log</a>
+                    <a href='@Url.Action("NewExercises","ExerciseLog")' class="nav-item nav-link">New Exercise</a>
+                    <a href='@Url.Action("Exercises","ExerciseLog")' class="nav-item nav-link ">Exercises</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src=@Url.Content("/Content/img/carousel-1.jpg") alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0">Gym & Fitness</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Exercise Log</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src=@Url.Content("/Content/img/carousel-2.jpg") alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Get Body In Shape</h2>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Gym Class Start -->
+       <!-- Gym Class End -->
+
+
+    <!-- About Start -->
+    <!-- About End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-training display-3 text-primary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Progression</h2>
+                        <p> Progression states that increases in time, weight or intensity should be kept within 10% or less each week to allow for a gradual adaptation while minimizing risk of injury. Without this progressive overloading, muscle growth will plateau
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-primary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-weightlifting display-3 text-secondary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Workout</h2>
+                        <p>a practice or exercise to test or improve one's fitness for athletic competition, ability, or performance
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-treadmill display-3 text-primary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Nutrition</h2>
+                        <p>Eat plenty of fruits and vegetables, consume lean proteins, eat healthy fats, get your whole-grain carbohydrates, and drink plenty of fluids, especially water
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+    <!-- GYM Feature Start -->
+    <!-- GYM Feature End -->
+
+
+    <!-- Subscribe Start -->
+    <!-- Subscribe End -->
+
+
+    <!-- Class Timetable Start -->
+   
+    <!-- Class Timetable End -->
+
+
+    <!-- BMI Calculation Start -->
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src=@Url.Content("/Content/lib/easing/easing.min.js")></script>
+    <script src=@Url.Content("/Content/lib/waypoints/waypoints.min.js")></script>
+
+    <!-- Contact Javascript File -->
+    <script src=@Url.Content("/Content/mail/jqBootstrapValidation.min.js")></script>
+    <script src=@Url.Content("/Content/mail/contact.js")></script>
+
+    <!-- Template Javascript -->
+    <script src=@Url.Content("/Content/js/main.js")></script>
+</body>
+
+</html>

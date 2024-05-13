@@ -1,0 +1,127 @@
+﻿@model ExcerciseLog.Models.NewExercise
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercise Log</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href=@Url.Content("/Content/img/favicon.ico") rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href=@Url.Content("/Content/lib/flaticon/font/flaticon.css") rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href=@Url.Content("/Content/css/style.min.css") rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">Exercise Log</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+               <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href='@Url.Action("HomePage","ExerciseLog")' class="nav-item nav-link ">Home</a>
+                    <a href='@Url.Action("Log","ExerciseLog")' class="nav-item nav-link">Exercise Log</a>
+                    <a href='@Url.Action("NewExercises","ExerciseLog")' class="nav-item nav-link">New Exercise</a>
+                    <a href='@Url.Action("Exercises","ExerciseLog")' class="nav-item nav-link active">Exercises</a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+        <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Exercise</h4>
+                    </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Contact Start -->
+        <div class="row">
+            <div class="col-md-6 pb-5">
+                <img style="width: 100%; height: 392px;" src=@Url.Content("/Content/img/feature-1.jpg")  aria-hidden="false" tabindex="0"></img>
+            </div>
+            <div class="col-md-6 pb-5">
+                <div class="contact-form">
+                    <div id="success"></div>
+                    @using (Html.BeginForm("updatelog", "ExerciseLog", FormMethod.Post))
+{
+                        @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.Logid)  <!-- Ensure this is hidden if you don't want to display it on the form -->
+
+                    <form>
+                        <div class="control-group">
+
+                            <h1 class="form-control" name="Excercise_name"> @Model.ExerciseName </h1>
+          
+                        </div>
+                        <div class="control-group">
+        <input type="date" id="date" name="date" class="form-control" value="@Model.date" />
+                        </div>
+                         <div class="control-group">
+                                <input type="text" id="set" name="set" class="form-control" value="@Model.set" />
+
+
+                                               <div>
+                                                  
+                        <div class="control-group">
+
+                                <input type="text" id="rep" name="rep" class="form-control" value="@Model.rep" />
+
+
+                                               <div>
+                            <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Update</button>
+                        </div>
+                    </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+        <!-- Footer End -->
+
+
+   <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src=@Url.Content("/Content/lib/easing/easing.min.js")></script>
+    <script src=@Url.Content("/Content/lib/waypoints/waypoints.min.js")></script>
+
+    <!-- Contact Javascript File -->
+    <script src=@Url.Content("/Content/mail/jqBootstrapValidation.min.js")></script>
+    <script src=@Url.Content("/Content/mail/contact.js")></script>
+
+    <!-- Template Javascript -->
+    <script src=@Url.Content("/Content/js/main.js")></script>
+</body>
+
+</html>

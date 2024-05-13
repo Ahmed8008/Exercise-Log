@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A814C23F-DDB2-4E44-B2D3-7634547DAA94}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExcerciseLog</RootNamespace>
+    <AssemblyName>ExcerciseLog</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ExerciseLogController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\NewExercise.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\style.min.css" />
+    <Content Include="Content\Exercises.html" />
+    <Content Include="Content\feature-1.jpg" />
+    <Content Include="Content\gym-website-template.jpg" />
+    <Content Include="Content\img\about.jpg" />
+    <Content Include="Content\img\bg.jpg" />
+    <Content Include="Content\img\blog-1.jpg" />
+    <Content Include="Content\img\blog-2.jpg" />
+    <Content Include="Content\img\carousel-1.jpg" />
+    <Content Include="Content\img\carousel-2.jpg" />
+    <Content Include="Content\img\feature-1.jpg" />
+    <Content Include="Content\img\feature-2.jpg" />
+    <Content Include="Content\img\feature-3.jpg" />
+    <Content Include="Content\img\feature-4.jpg" />
+    <Content Include="Content\img\team-1.jpg" />
+    <Content Include="Content\img\team-2.jpg" />
+    <Content Include="Content\img\team-3.jpg" />
+    <Content Include="Content\img\team-4.jpg" />
+    <Content Include="Content\img\testimonial-1.jpg" />
+    <Content Include="Content\img\testimonial-2.jpg" />
+    <Content Include="Content\img\testimonial-3.jpg" />
+    <Content Include="Content\img\user.jpg" />
+    <Content Include="Content\index.html" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\lib\easing\easing.js" />
+    <Content Include="Content\lib\easing\easing.min.js" />
+    <Content Include="Content\lib\flaticon\backup.txt" />
+    <Content Include="Content\lib\flaticon\font\flaticon.css" />
+    <Content Include="Content\lib\flaticon\font\flaticon.html" />
+    <Content Include="Content\lib\flaticon\font\Flaticon.svg" />
+    <Content Include="Content\lib\waypoints\waypoints.min.js" />
+    <Content Include="Content\LICENSE.txt" />
+    <Content Include="Content\Log.html" />
+    <Content Include="Content\mail\contact.js" />
+    <Content Include="Content\mail\jqBootstrapValidation.min.js" />
+    <Content Include="Content\NewExercise.html" />
+    <Content Include="Content\READ-ME.txt" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap-grid.css" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap-reboot.css" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap.css" />
+    <Content Include="Content\testexercise.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\lib\flaticon\font\Flaticon.eot" />
+    <Content Include="Content\lib\flaticon\font\Flaticon.ttf" />
+    <Content Include="Content\lib\flaticon\font\Flaticon.woff" />
+    <Content Include="Content\lib\flaticon\font\Flaticon.woff2" />
+    <Content Include="Content\lib\flaticon\font\_flaticon.scss" />
+    <Content Include="Content\lib\flaticon\license\license.pdf" />
+    <Content Include="Content\lib\waypoints\links.php" />
+    <Content Include="Content\mail\contact.php" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap-grid.css.map" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap-reboot.css.map" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap.css.map" />
+    <Content Include="Content\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_float.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_size.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="Content\scss\bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_align.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_background.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_display.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_interactions.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_overflow.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_position.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_shadows.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_stretched-link.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_text.scss" />
+    <Content Include="Content\scss\bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="Content\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_card.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_close.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_code.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_custom-forms.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_images.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_input-group.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_jumbotron.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_media.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_print.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_root.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_type.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="Content\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Content\scss\style.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ExerciseLog\HomePage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ExerciseLog\Log.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ExerciseLog\NewExercises.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ExerciseLog\Exercises.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ExerciseLog\Filllog.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ExerciseLog\updatelog.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\ExcersieLog.pubxml" />
+    <Content Include="Views\ExerciseLog\EditExercise.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55124/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
